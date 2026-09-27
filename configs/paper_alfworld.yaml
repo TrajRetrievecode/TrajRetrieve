@@ -1,0 +1,7 @@
+# Settings used in the paper.
+embedding_model: "BAAI/bge-m3"
+reranker_model: "BAAI/bge-reranker-base"
+bm25:
+  alpha: 0.90
+rerank_k: 50
+candidate_fields: [provenance, targets, summary]

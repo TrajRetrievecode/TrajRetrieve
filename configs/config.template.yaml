@@ -1,0 +1,50 @@
+# TrajRetrieve configuration template.
+#
+# Copy this file to ``configs/config.yaml`` and fill in your own values; the
+# real ``config.yaml`` is git-ignored and MUST NOT be committed. No secret is
+# ever stored in code -- everything the optional LLM needs is read from here.
+#
+# Only the optional offline-LLM annotation and the optional
+# LLM-judge reranker require credentials. Encoding / indexing / cross-encoder
+# reranking work with no ``llm:`` block at all (the three LLM-derived schema
+# fields are simply left empty and skipped by the templates).
+
+# --------------------------------------------------------------------------- #
+# Models (referenced by HuggingFace id; downloaded on first use).             #
+# --------------------------------------------------------------------------- #
+
+# Dense bi-encoder used for both queries and candidates (asymmetric templates).
+embedding_model: "BAAI/bge-m3"
+
+# Step-3 cross-encoder reranker (the default reranker).
+reranker_model: "BAAI/bge-reranker-base"
+
+# --------------------------------------------------------------------------- #
+# Hybrid retrieval hyper-parameters.                                          #
+# --------------------------------------------------------------------------- #
+
+bm25:
+  # score(q,s) = alpha * dense_hat(q,s) + (1 - alpha) * bm25_hat(q,s)
+  alpha: 0.7
+
+# Number of top survivors passed to the Step-3 reranker (paper K = 50).
+rerank_k: 50
+
+# --------------------------------------------------------------------------- #
+# Optional LLM endpoint (OpenAI-compatible) -- annotation + LLM-judge rerank. #
+# --------------------------------------------------------------------------- #
+#
+# Leave ``api_key`` as the placeholder to disable; with no usable key the
+# annotators and the LLM-judge reranker degrade to no-ops automatically.
+
+llm:
+  base_url: "https://your-openai-compatible-endpoint/v1"
+  api_key:  "YOUR_KEY_HERE"        # NEVER commit a real key
+  model:    "your-model-id"
+  timeout:  180                    # request timeout in seconds
+
+# Optional endpoint for the offline annotators (``--annotate``); defaults to ``llm:``.
+annotator:
+  base_url: "https://your-openai-compatible-endpoint/v1"
+  api_key:  "YOUR_KEY_HERE"        # NEVER commit a real key
+  model:    "your-model-id"

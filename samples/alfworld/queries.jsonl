@@ -1,0 +1,10 @@
+{"error": "", "failed_actions": [], "goal": "Put a soap bar in the cabinet", "query_id": "alfworld_q01", "subgoals": [], "task_type": "placement"}
+{"error": "", "failed_actions": [], "goal": "Put a pen on the desk", "query_id": "alfworld_q02", "subgoals": [], "task_type": "placement"}
+{"error": "", "failed_actions": [], "goal": "Look at a pen under the desk lamp", "query_id": "alfworld_q03", "subgoals": [], "task_type": "examination"}
+{"error": "", "failed_actions": [], "goal": "Examine an alarm clock with the desk lamp", "query_id": "alfworld_q04", "subgoals": [], "task_type": "examination"}
+{"error": "", "failed_actions": [], "goal": "Examine a book with the desk lamp", "query_id": "alfworld_q05", "subgoals": [], "task_type": "examination"}
+{"error": "", "failed_actions": [], "goal": "Put a bottle on the counter", "query_id": "alfworld_q06", "subgoals": [], "task_type": "placement"}
+{"error": "", "failed_actions": [], "goal": "Move a phone to the desk", "query_id": "alfworld_q07", "subgoals": [], "task_type": "placement"}
+{"error": "", "failed_actions": [], "goal": "Examine a phone with the desk lamp while holding it", "query_id": "alfworld_q08", "subgoals": [], "task_type": "examination"}
+{"error": "", "failed_actions": [], "goal": "Look at an alarm clock under the desk lamp", "query_id": "alfworld_q09", "subgoals": [], "task_type": "examination"}
+{"error": "", "failed_actions": [], "goal": "Place a cup with a pen in it on the desk", "query_id": "alfworld_q10", "subgoals": [], "task_type": "placement"}

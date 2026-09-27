@@ -1,0 +1,131 @@
+{
+  "environments": {
+    "appworld": {
+      "queries": [
+        "appworld_q01",
+        "appworld_q02",
+        "appworld_q03",
+        "appworld_q04",
+        "appworld_q05",
+        "appworld_q06",
+        "appworld_q07",
+        "appworld_q08",
+        "appworld_q09",
+        "appworld_q10"
+      ],
+      "segments": [
+        "appworld_task01_3::seg_000",
+        "appworld_task02_2::seg_000",
+        "appworld_task03_1::seg_000",
+        "appworld_task04_1::seg_000",
+        "appworld_task05_2::seg_000",
+        "appworld_task06_1::seg_000",
+        "appworld_task07_1::seg_000",
+        "appworld_task07_2::seg_000",
+        "appworld_task08_1::seg_000",
+        "appworld_task09_2::seg_000",
+        "appworld_task10_1::seg_000",
+        "appworld_task11_1::seg_000",
+        "appworld_task11_2::seg_000",
+        "appworld_task12_2::seg_000",
+        "appworld_task13_1::seg_000",
+        "appworld_task13_3::seg_000"
+      ],
+      "grade_counts": {
+        "-1": 1,
+        "0": 3,
+        "1": 26,
+        "2": 10,
+        "3": 4
+      },
+      "sha256": {
+        "samples/appworld/segments.jsonl": "56948fa3a3b1cc38b21835e535eb18f711221d0e5088b745f039e212a1c28120",
+        "samples/appworld/queries.jsonl": "9108e65448f374e18d5c0558fd5e7ca01a82947d3f7a93d4bfabd99206a34656",
+        "samples/appworld/qrels.jsonl": "8d85c5d5205e1b1d3219a21fe44080c85fea1f353cd27136521e7712a1bf6ac6"
+      }
+    },
+    "alfworld": {
+      "queries": [
+        "alfworld_q01",
+        "alfworld_q02",
+        "alfworld_q03",
+        "alfworld_q04",
+        "alfworld_q05",
+        "alfworld_q06",
+        "alfworld_q07",
+        "alfworld_q08",
+        "alfworld_q09",
+        "alfworld_q10"
+      ],
+      "segments": [
+        "alfworld_traj01::seg_000",
+        "alfworld_traj01::seg_001",
+        "alfworld_traj02::seg_000",
+        "alfworld_traj03::seg_000",
+        "alfworld_traj04::seg_000",
+        "alfworld_traj05::seg_000",
+        "alfworld_traj06::seg_000",
+        "alfworld_traj07::seg_000",
+        "alfworld_traj08::seg_000",
+        "alfworld_traj09::seg_000",
+        "alfworld_traj10::seg_000",
+        "alfworld_traj11::seg_000",
+        "alfworld_traj12::seg_000",
+        "alfworld_traj13::seg_000",
+        "alfworld_traj14::seg_000",
+        "alfworld_traj15::seg_000",
+        "alfworld_traj16::seg_000",
+        "alfworld_traj17::seg_000",
+        "alfworld_traj18::seg_000",
+        "alfworld_traj19::seg_000",
+        "alfworld_traj20::seg_000",
+        "alfworld_traj21::seg_000"
+      ],
+      "grade_counts": {
+        "0": 21,
+        "1": 24,
+        "2": 22,
+        "3": 8
+      },
+      "sha256": {
+        "samples/alfworld/segments.jsonl": "019b8d972579433740b62bfb3fa13bb40c50a9200e70daeb5ade7eedcfc5308c",
+        "samples/alfworld/queries.jsonl": "629018b1fc1edf73f501348216d89de8b431564b93326595f3e507d6693c3bd4",
+        "samples/alfworld/qrels.jsonl": "9e5e2dcaf82a85dddfd41b8fbfe2019022726f71f5f03cebc9044c7caf77f4c6"
+      }
+    },
+    "swepro": {
+      "queries": [
+        "swepro_q01",
+        "swepro_q02",
+        "swepro_q03",
+        "swepro_q04",
+        "swepro_q05",
+        "swepro_q06",
+        "swepro_q07",
+        "swepro_q08",
+        "swepro_q09",
+        "swepro_q10"
+      ],
+      "segments": [
+        "swepro_traj01::seg_000",
+        "swepro_traj02::seg_000",
+        "swepro_traj03::seg_000",
+        "swepro_traj04::seg_000",
+        "swepro_traj05::seg_000",
+        "swepro_traj06::seg_000",
+        "swepro_traj07::seg_000",
+        "swepro_traj08::seg_000"
+      ],
+      "grade_counts": {
+        "1": 7,
+        "2": 2,
+        "3": 2
+      },
+      "sha256": {
+        "samples/swepro/segments.jsonl": "639069da2cd917c3753e06e0aa04482418adfc2d5f10ecb1dd60c768e528de62",
+        "samples/swepro/queries.jsonl": "bd18844aa648df235e3e633293d5777c62011a6266ad60d2e87e8e042a8e8051",
+        "samples/swepro/qrels.jsonl": "576e011dd2e5fc053ea99e424c1bc2c43e73afdbd61097f18df09838e59b0222"
+      }
+    }
+  }
+}

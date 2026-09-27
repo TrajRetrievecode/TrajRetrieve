@@ -1,0 +1,18 @@
+# TrajRetrieve runtime dependencies.
+#
+# The core segmentation / schema logic (trajretrieve.segmenter, .schema,
+# .models) depends only on the Python standard library. The packages below are
+# pulled in by encoding, indexing, reranking, and the optional offline LLM.
+
+numpy                  # dense vectors, score normalization
+torch                  # backs sentence-transformers
+sentence-transformers  # BGEEncoder bi-encoder + CrossEncoderReranker
+rank_bm25              # sparse BM25 index (hybrid scoring)
+openai                 # optional OpenAI-compatible LLM (annotation / judge rerank)
+pyyaml                 # configs/config.yaml parsing
+
+# Optional approximate-nearest-neighbour backends for the dense index. Without
+# either, DenseIndex falls back to exact brute-force search (fine for small /
+# medium pools). Install one for sub-millisecond ANN at scale:
+# faiss-cpu            # IndexHNSWFlat (preferred)
+# hnswlib              # Index(space="cosine")

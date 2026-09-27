@@ -1,0 +1,24 @@
+Below is one failed agent task and the retrieved candidate segments.
+Rate each candidate on this 5-level scale:
+
+  3  = directly usable as a repair rule. The candidate's API, sequence, and
+       parameters are strongly relevant; the failure is exactly the missing step.
+  2  = useful, but the downstream model must generalize. Solves a similar
+       sub-task, or uses the right APIs with different parameters, or requires
+       merging several candidate steps.
+  1  = same domain or same API, but does not fix THIS failure. For example, a
+       candidate for a different sub-task of the same application. The rule
+       does not transfer.
+  0  = irrelevant. Different application, or off-task entirely.
+  -1 = harmful. Would reinforce the wrong intent: the candidate uses the wrong
+       API, a buggy path, or a deprecated approach, and copying it would
+       propagate the defect.
+
+Label -1 deserves particular attention when a candidate is ranked highly by
+retrieval yet is actually misleading; retrieval score and relevance are
+independent judgments.
+
+Return one entry per candidate, in the order the candidates were presented,
+with the candidate identifier, the integer label in -1..3, and a one-sentence
+rationale of at most 160 characters. Every candidate identifier must appear
+exactly once, with no duplicates and no omissions.

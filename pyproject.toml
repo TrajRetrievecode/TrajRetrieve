@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trajretrieve"
+version = "0.1.0"
+description = "Segment-level structured retrieval over agent execution trajectories"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "torch",
+    "sentence-transformers",
+    "rank_bm25",
+    "openai",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+ann = ["faiss-cpu"]   # or: hnswlib
+
+[tool.setuptools]
+packages = ["trajretrieve", "trajretrieve.segmenter", "trajretrieve.schema",
+            "trajretrieve.index", "trajretrieve.retrieval",
+            "adapters", "adapters.appworld", "adapters.swe", "adapters.alfworld"]

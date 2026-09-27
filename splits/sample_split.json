@@ -1,0 +1,63 @@
+{
+  "note": "Validation split (20%, stratified by task_type) of the ALFWorld sample queries.",
+  "environment": "alfworld",
+  "stratify_key": "task_type",
+  "val_frac": 0.2,
+  "seed": 0,
+  "counts": {
+    "test": 8,
+    "validation": 2
+  },
+  "assignments": [
+    {
+      "query_id": "alfworld_q01",
+      "task_type": "placement",
+      "split": "validation"
+    },
+    {
+      "query_id": "alfworld_q02",
+      "task_type": "placement",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q03",
+      "task_type": "examination",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q04",
+      "task_type": "examination",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q05",
+      "task_type": "examination",
+      "split": "validation"
+    },
+    {
+      "query_id": "alfworld_q06",
+      "task_type": "placement",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q07",
+      "task_type": "placement",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q08",
+      "task_type": "examination",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q09",
+      "task_type": "examination",
+      "split": "test"
+    },
+    {
+      "query_id": "alfworld_q10",
+      "task_type": "placement",
+      "split": "test"
+    }
+  ]
+}
